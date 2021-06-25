@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspaCommunicator", "EspaCom
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EspaCommunicatorInstaller", "EspaCommunicatorInstaller\EspaCommunicatorInstaller.vdproj", "{357C1840-10A4-44F3-805C-C74A538C87B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspaLib", "EspaLib\EspaLib.csproj", "{760E6F66-8FE5-443F-B31D-0C4163E654FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicensingLib", "Licensing\LicensingLib.csproj", "{A93F320B-1CC4-4493-AA2E-9ECE00C9D2D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{FA6E2185-E6A8-45AB-B452-44643424FE5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{357C1840-10A4-44F3-805C-C74A538C87B3}.Debug|Any CPU.ActiveCfg = Debug
 		{357C1840-10A4-44F3-805C-C74A538C87B3}.Release|Any CPU.ActiveCfg = Release
+		{760E6F66-8FE5-443F-B31D-0C4163E654FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760E6F66-8FE5-443F-B31D-0C4163E654FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760E6F66-8FE5-443F-B31D-0C4163E654FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760E6F66-8FE5-443F-B31D-0C4163E654FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A93F320B-1CC4-4493-AA2E-9ECE00C9D2D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93F320B-1CC4-4493-AA2E-9ECE00C9D2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A93F320B-1CC4-4493-AA2E-9ECE00C9D2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A93F320B-1CC4-4493-AA2E-9ECE00C9D2D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

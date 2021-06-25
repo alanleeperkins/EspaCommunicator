@@ -44,13 +44,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants.cs" />
     <Compile Include="EventArgs.cs" />
+    <Compile Include="FileManagement.cs" />
+    <Compile Include="FormDataBlockConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataBlockConfigurator.Designer.cs">
+      <DependentUpon>FormDataBlockConfigurator.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAbout.Designer.cs">
       <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfiguration.Designer.cs">
+      <DependentUpon>FormConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeviceStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeviceStatus.Designer.cs">
+      <DependentUpon>FormDeviceStatus.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditEspaRecord.cs">
       <SubType>Form</SubType>
@@ -59,38 +77,81 @@
       <DependentUpon>FormEditEspaRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Enums.cs" />
-    <Compile Include="FormEspaMessage.cs">
+    <Compile Include="FormErrorMessage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEspaMessage.Designer.cs">
-      <DependentUpon>FormEspaMessage.cs</DependentUpon>
+    <Compile Include="FormErrorMessage.Designer.cs">
+      <DependentUpon>FormErrorMessage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTrafficOverview.cs">
+    <Compile Include="FormEspaDeviceTypeSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTrafficOverview.Designer.cs">
-      <DependentUpon>FormTrafficOverview.cs</DependentUpon>
+    <Compile Include="FormEspaDeviceTypeSelection.Designer.cs">
+      <DependentUpon>FormEspaDeviceTypeSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLicenseManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLicenseManager.Designer.cs">
+      <DependentUpon>FormLicenseManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddLicenseKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddLicenseKey.Designer.cs">
+      <DependentUpon>FormAddLicenseKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalData.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerialCommunicator.cs" />
-    <Compile Include="SingleEspaMessage.cs" />
-    <Compile Include="SingleEspaRecord.cs" />
-    <Compile Include="SingleEspaTrafficInfo.cs" />
-    <Compile Include="TrafficLog.cs" />
+    <Compile Include="PropertyEspaDeviceConfiguration.cs" />
+    <Compile Include="PropertyEspaDeviceStatus.cs" />
+    <Compile Include="PropertyEspaPollAddresses.cs" />
+    <Compile Include="PropertyGridObjectSimulationControlStation.cs" />
+    <Compile Include="PropertyGridObjectSimulationStation.cs" />
+    <Compile Include="RegistryCtrl.cs" />
+    <Compile Include="SettingsManagement.cs" />
+    <Compile Include="SettingsVars.cs" />
+    <Compile Include="SpecialToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsLogging.cs" />
+    <EmbeddedResource Include="FormDataBlockConfigurator.resx">
+      <DependentUpon>FormDataBlockConfigurator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfiguration.resx">
+      <DependentUpon>FormConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeviceStatus.resx">
+      <DependentUpon>FormDeviceStatus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditEspaRecord.resx">
       <DependentUpon>FormEditEspaRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEspaMessage.resx">
-      <DependentUpon>FormEspaMessage.cs</DependentUpon>
+    <EmbeddedResource Include="FormErrorMessage.resx">
+      <DependentUpon>FormErrorMessage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTrafficOverview.resx">
-      <DependentUpon>FormTrafficOverview.cs</DependentUpon>
+    <EmbeddedResource Include="FormEspaDeviceTypeSelection.resx">
+      <DependentUpon>FormEspaDeviceTypeSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLicenseManager.resx">
+      <DependentUpon>FormLicenseManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddLicenseKey.resx">
+      <DependentUpon>FormAddLicenseKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -114,7 +175,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EspaLib\EspaLib.csproj">
+      <Project>{760e6f66-8fe5-443f-b31d-0c4163e654fc}</Project>
+      <Name>EspaLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Licensing\LicensingLib.csproj">
+      <Project>{a93f320b-1cc4-4493-aa2e-9ece00c9d2d4}</Project>
+      <Name>LicensingLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

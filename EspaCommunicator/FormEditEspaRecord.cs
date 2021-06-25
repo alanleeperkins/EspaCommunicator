@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EspaLib;
 
 namespace EspaCommunicator
 {
@@ -23,7 +24,7 @@ namespace EspaCommunicator
         }
 
         /// <summary>
-        /// 
+        /// constructor
         /// </summary>
         public FormEditEspaRecord(eEditMode editmode, int recordid, string recorddata="" )
         {

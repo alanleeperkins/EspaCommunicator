@@ -3,47 +3,82 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EspaLib;
 
 namespace EspaCommunicator
 {
-    public delegate void SerialDataReceivedHandler(object sender, SerialDataReceivedArgs e);
 
-    public class SerialDataReceivedArgs : EventArgs
+    #region SendEspaDataArgs
+    public delegate void SendEspaDataBlockHandler(object sender, SendEspaDataBlockArgs e);
+    
+    public class SendEspaDataBlockArgs : EventArgs
     {
+        private eEspaDataBlockType datablocktype;
+        private byte[] rawdatablock;
+        private SingleEspaDataBlock recorddata;
 
-        private char[] receiveddata;
-        private int datalength;
-        private DateTime date;
-
-        public char[] ReceivedData
+        #region properties
+        public eEspaDataBlockType DataBlockType
         {
-            get { return receiveddata; }
-            set { receiveddata = value; }
+            get { return datablocktype; }
+            set { datablocktype = value; }
         }
 
-        public int DataLength
+        public byte[] RawDataBlock
         {
-            get { return datalength; }
-            set { datalength = value; }
+            get { return rawdatablock; }
+            set { rawdatablock = value; }
         }
 
-        public DateTime Date
+        public SingleEspaDataBlock RecordDataBlock
         {
-            get { return date; }
-            set { date = value; }
+            get { return recorddata; }
+            set { recorddata = value; }
         }
-  
+        #endregion
+
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="data"></param>
-        /// <param name="date"></param>
-        public SerialDataReceivedArgs(char[] data,int datalength, DateTime date)
+        /// <param name="type"></param>
+        /// <param name="rawdata"></param>
+        /// <param name="recorddata"></param>
+        public SendEspaDataBlockArgs(eEspaDataBlockType type, byte[] rawdata = null, SingleEspaDataBlock recordData = null)
         {
-            ReceivedData = data;
-            DataLength = datalength;
-            Date = date;
+            datablocktype = type;
+            rawdatablock = rawdata;
+            recorddata = recordData;
+        }       
+    }
+    #endregion
+
+    #region SendDataIntoEspaDataBusArgs
+    public delegate void SendDataIntoEspaDataBusHandler(object sender, SendDataIntoEspaDataBusArgs e);
+ 
+    public class SendDataIntoEspaDataBusArgs : EventArgs
+    {
+        private eEspaRequestType type;
+        public eEspaRequestType Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
+
+        private object content;
+        public object Content
+        {
+            get { return content; }
+            set { content = value; }
+        }        
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public SendDataIntoEspaDataBusArgs(eEspaRequestType _type, object _content)
+        {
+            type = _type;
+            content = _content;
         }
     }
-
+    #endregion
 }

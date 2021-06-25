@@ -34,6 +34,8 @@
             this.lbBuildTime = new System.Windows.Forms.Label();
             this.lbBuildType = new System.Windows.Forms.Label();
             this.lbVersion = new System.Windows.Forms.Label();
+            this.btClose = new System.Windows.Forms.Button();
+            this.tbSupportInfo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbSoftwareName
@@ -91,11 +93,34 @@
             this.lbVersion.TabIndex = 5;
             this.lbVersion.Text = "label6";
             // 
+            // btClose
+            // 
+            this.btClose.Location = new System.Drawing.Point(177, 249);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(200, 34);
+            this.btClose.TabIndex = 6;
+            this.btClose.Text = "Close";
+            this.btClose.UseVisualStyleBackColor = true;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
+            // tbSupportInfo
+            // 
+            this.tbSupportInfo.Location = new System.Drawing.Point(19, 178);
+            this.tbSupportInfo.Multiline = true;
+            this.tbSupportInfo.Name = "tbSupportInfo";
+            this.tbSupportInfo.ReadOnly = true;
+            this.tbSupportInfo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbSupportInfo.Size = new System.Drawing.Size(358, 65);
+            this.tbSupportInfo.TabIndex = 8;
+            this.tbSupportInfo.Text = "Supports ESPA 4.4.4";
+            // 
             // FormAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 186);
+            this.ClientSize = new System.Drawing.Size(391, 292);
+            this.Controls.Add(this.tbSupportInfo);
+            this.Controls.Add(this.btClose);
             this.Controls.Add(this.lbVersion);
             this.Controls.Add(this.lbBuildType);
             this.Controls.Add(this.lbBuildTime);
@@ -120,5 +145,7 @@
         private System.Windows.Forms.Label lbBuildTime;
         private System.Windows.Forms.Label lbBuildType;
         private System.Windows.Forms.Label lbVersion;
+        private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.TextBox tbSupportInfo;
     }
 }

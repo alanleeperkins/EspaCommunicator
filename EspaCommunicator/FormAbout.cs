@@ -13,6 +13,9 @@ namespace EspaCommunicator
 {
     public partial class FormAbout : Form
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public FormAbout()
         {
             InitializeComponent();
@@ -22,6 +25,9 @@ namespace EspaCommunicator
             Text = String.Format("{0} - About",Program.GlobalVars.DisplayApplicationName);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void GetSoftwareInfo()
         {
 
@@ -42,6 +48,9 @@ namespace EspaCommunicator
             Program.GlobalVars.BuildTime = AssemblyDescription;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void ShowSoftwareInfo()
         {
             lbSoftwareName.Text = "Software: " + Program.GlobalVars.DisplayApplicationName; //OK
@@ -50,6 +59,16 @@ namespace EspaCommunicator
             lbBuildTime.Text = "Build-Time: " + Program.GlobalVars.BuildTime; //OK
             lbBuildType.Text = "Build-Type: " + Program.GlobalVars.BuildType; //Ok
             lbVersion.Text = "Version: " + Program.GlobalVars.BuildVersion;  //OK
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

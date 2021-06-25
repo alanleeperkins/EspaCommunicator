@@ -81,6 +81,7 @@
             this.tcEspaRecordEditor.SelectedIndex = 0;
             this.tcEspaRecordEditor.Size = new System.Drawing.Size(552, 104);
             this.tcEspaRecordEditor.TabIndex = 0;
+            this.tcEspaRecordEditor.Tag = "";
             // 
             // tpCallAddress
             // 
@@ -91,6 +92,7 @@
             this.tpCallAddress.Padding = new System.Windows.Forms.Padding(3);
             this.tpCallAddress.Size = new System.Drawing.Size(544, 78);
             this.tpCallAddress.TabIndex = 0;
+            this.tpCallAddress.Tag = "CallAddress";
             this.tpCallAddress.Text = "Call Address";
             this.tpCallAddress.UseVisualStyleBackColor = true;
             // 
@@ -120,6 +122,7 @@
             this.tpDisplayText.Padding = new System.Windows.Forms.Padding(3);
             this.tpDisplayText.Size = new System.Drawing.Size(544, 78);
             this.tpDisplayText.TabIndex = 1;
+            this.tpDisplayText.Tag = "DisplayText";
             this.tpDisplayText.Text = "Display Text";
             this.tpDisplayText.UseVisualStyleBackColor = true;
             // 
@@ -149,6 +152,7 @@
             this.tpBeepCoding.Name = "tpBeepCoding";
             this.tpBeepCoding.Size = new System.Drawing.Size(544, 78);
             this.tpBeepCoding.TabIndex = 2;
+            this.tpBeepCoding.Tag = "BeepCoding";
             this.tpBeepCoding.Text = "Beep Coding";
             this.tpBeepCoding.UseVisualStyleBackColor = true;
             // 
@@ -189,6 +193,7 @@
             this.tpCallType.Name = "tpCallType";
             this.tpCallType.Size = new System.Drawing.Size(544, 78);
             this.tpCallType.TabIndex = 3;
+            this.tpCallType.Tag = "CallType";
             this.tpCallType.Text = "Call Type";
             this.tpCallType.UseVisualStyleBackColor = true;
             // 
@@ -203,7 +208,7 @@
             "\'3\'=Standard call (no speech)"});
             this.coboCallType.Location = new System.Drawing.Point(99, 12);
             this.coboCallType.Name = "coboCallType";
-            this.coboCallType.Size = new System.Drawing.Size(121, 21);
+            this.coboCallType.Size = new System.Drawing.Size(189, 21);
             this.coboCallType.TabIndex = 4;
             // 
             // label4
@@ -223,7 +228,8 @@
             this.tpNumerOfTransmissions.Name = "tpNumerOfTransmissions";
             this.tpNumerOfTransmissions.Size = new System.Drawing.Size(544, 78);
             this.tpNumerOfTransmissions.TabIndex = 4;
-            this.tpNumerOfTransmissions.Text = "No. of Transm.";
+            this.tpNumerOfTransmissions.Tag = "NumberOfTransmissions";
+            this.tpNumerOfTransmissions.Text = "Number of Transmissions";
             this.tpNumerOfTransmissions.UseVisualStyleBackColor = true;
             // 
             // tbNumberOfTransmissions
@@ -251,6 +257,7 @@
             this.tpPriority.Name = "tpPriority";
             this.tpPriority.Size = new System.Drawing.Size(544, 78);
             this.tpPriority.TabIndex = 5;
+            this.tpPriority.Tag = "Priority";
             this.tpPriority.Text = "Priority";
             this.tpPriority.UseVisualStyleBackColor = true;
             // 
@@ -285,6 +292,7 @@
             this.tpCallStatus.Name = "tpCallStatus";
             this.tpCallStatus.Size = new System.Drawing.Size(544, 78);
             this.tpCallStatus.TabIndex = 6;
+            this.tpCallStatus.Tag = "CallStatus";
             this.tpCallStatus.Text = "Call Status";
             this.tpCallStatus.UseVisualStyleBackColor = true;
             // 
@@ -326,6 +334,7 @@
             this.tpSystemStatus.Name = "tpSystemStatus";
             this.tpSystemStatus.Size = new System.Drawing.Size(544, 78);
             this.tpSystemStatus.TabIndex = 7;
+            this.tpSystemStatus.Tag = "SystemStatus";
             this.tpSystemStatus.Text = "System Status";
             this.tpSystemStatus.UseVisualStyleBackColor = true;
             // 
@@ -356,7 +365,7 @@
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
             this.btCancel.TabIndex = 1;
-            this.btCancel.Text = "Cancel";
+            this.btCancel.Text = "&Cancel";
             this.btCancel.UseVisualStyleBackColor = true;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
@@ -366,7 +375,7 @@
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
             this.btSave.TabIndex = 2;
-            this.btSave.Text = "Save";
+            this.btSave.Text = "&Save";
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
@@ -378,6 +387,9 @@
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.tcEspaRecordEditor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormEditEspaRecord";
             this.Text = "EditRecord";
             this.tcEspaRecordEditor.ResumeLayout(false);
