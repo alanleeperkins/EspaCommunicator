@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspaCommunicator", "EspaCommunicator\EspaCommunicator.csproj", "{FA6E2185-E6A8-45AB-B452-44643424FE5C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EspaCommunicatorInstaller", "EspaCommunicatorInstaller\EspaCommunicatorInstaller.vdproj", "{357C1840-10A4-44F3-805C-C74A538C87B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA6E2185-E6A8-45AB-B452-44643424FE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA6E2185-E6A8-45AB-B452-44643424FE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA6E2185-E6A8-45AB-B452-44643424FE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA6E2185-E6A8-45AB-B452-44643424FE5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357C1840-10A4-44F3-805C-C74A538C87B3}.Debug|Any CPU.ActiveCfg = Debug
+		{357C1840-10A4-44F3-805C-C74A538C87B3}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
